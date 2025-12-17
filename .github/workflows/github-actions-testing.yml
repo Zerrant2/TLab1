@@ -27,5 +27,6 @@ jobs:
         run: | 
           pycodestyle rating/src rating/test
       - name: Test with pytest
-        run: | 
-          PYTHONPATH=./rating:./rating/src pytest rating/test
+        run: |
+          export PYTHONPATH=$PYTHONPATH:$(pwd)/rating/src
+          pytest rating/test
