@@ -1,4 +1,4 @@
-from DataReader import DataReader
+from src.DataReader import DataReader
 from src.Types import DataType
 
 class TextDataReader(DataReader):
