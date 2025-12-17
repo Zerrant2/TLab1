@@ -26,21 +26,36 @@
 
 ## Запуск проекта
 
-### 1. Клонирование репозитория
+#### 1. Клонирование репозитория
 ```bash
 git clone https://github.com/ВАШ_НИКНЕЙМ/PTLab1.git
 cd PTLab1
-
+```
 
 ### 2. Установка зависимостей
+```bash
 pip install -r requirements.txt
+```
+
 
 ### 3. Запуск тестов
+```bash
 python -m pytest test
+```
 
-## 4. Запуск программы
+### 4. Запуск программы
+```bash
 python src/main.py -p data/data.txt
+```
 
+classDiagram
+    class DataReader {
+        <<abstract>>
+        +read(path: str) DataType
+    }
+## UML-диаграмма классов
+
+```mermaid
 classDiagram
     class DataReader {
         <<abstract>>
@@ -68,7 +83,7 @@ classDiagram
     DataReader <|-- TextDataReader
     DataReader <|-- XMLDataReader
     CalcRating <.. CalcFirstQuartile : использует
-
+```
 Выводы
 В ходе выполнения лабораторной работы я:
 Настроил рабочее окружение с использованием Anaconda и Git.
